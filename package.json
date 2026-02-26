@@ -1,0 +1,25 @@
+{
+  "name": "templateprojectjavascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npx playwright install",
+    "test": "cucumber-js --format \"json:report.json\"",
+    "test:ui": "cucumber-js -p ui",
+    "report": "node scripts/open-report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@cucumber/html-formatter": "^20.4.0",
+    "@playwright/test": "^1.58.2",
+    "cucumber-html-reporter": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "open": "^9.1.0",
+    "playwright": "^1.58.2"
+  }
+}

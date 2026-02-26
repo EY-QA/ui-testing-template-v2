@@ -1,0 +1,5 @@
+# Ignore  reports and screenshots
+reports/*.html
+screenshots/
+# Ignore node modules
+node_modules/

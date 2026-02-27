@@ -1,5 +1,6 @@
 # Ignore  reports and screenshots
-reports/*.html
+reports/
 screenshots/
+artifacts/
 # Ignore node modules
 node_modules/

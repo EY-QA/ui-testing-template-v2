@@ -9,9 +9,10 @@ let browser;
 
 // --- Global before/after ---
 BeforeAll(async function () {
+  const browserName = (process.env.PW_BROWSER || 'chromium').toLowerCase();
   browser = await BrowserManager.launch();
   if (!browser) throw new Error('[hooks] Browser failed to launch');
-  console.log('[hooks] Browser launched.');
+  console.log(`[hooks] Browser ${browserName} launched.`);
 });
 
 AfterAll(async function () {

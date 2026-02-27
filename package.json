@@ -7,7 +7,9 @@
     "postinstall": "npx playwright install",
     "test": "cucumber-js --format \"json:report.json\"",
     "test:ui": "cucumber-js -p ui",
-    "report": "node scripts/open-report.js"
+    "report": "node scripts/open-report.js",
+    "smoke": "cucumber-js --tags '@smoke'",
+    "regression": "cucumber-js --tags 'not @wip'"
   },
   "keywords": [],
   "author": "",

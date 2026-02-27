@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3438308399
+              "duration": 4150689300
             }
           },
           {
@@ -22,12 +22,9 @@
             "keyword": "Given ",
             "line": 7,
             "name": "the user is on the login page",
-            "match": {
-              "location": "features\\login\\login.steps.js:7"
-            },
             "result": {
-              "status": "passed",
-              "duration": 1074329599
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -35,12 +32,9 @@
             "keyword": "When ",
             "line": 11,
             "name": "the user enters username \"standard_user\" and password \"secret_sauce\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:14"
-            },
             "result": {
-              "status": "passed",
-              "duration": 119395000
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -48,12 +42,9 @@
             "keyword": "Then ",
             "line": 12,
             "name": "the user should be redirected to the main page",
-            "match": {
-              "location": "features\\login\\login.steps.js:21"
-            },
             "result": {
-              "status": "passed",
-              "duration": 10373098
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -61,7 +52,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 191850600
+              "duration": 159308399
             }
           }
         ],
@@ -89,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1295455300
+              "duration": 1445826100
             }
           },
           {
@@ -97,12 +88,9 @@
             "keyword": "Given ",
             "line": 7,
             "name": "the user is on the login page",
-            "match": {
-              "location": "features\\login\\login.steps.js:7"
-            },
             "result": {
-              "status": "passed",
-              "duration": 771071800
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -110,12 +98,9 @@
             "keyword": "When ",
             "line": 11,
             "name": "the user enters username \"performance_glitch_user\" and password \"secret_sauce\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:14"
-            },
             "result": {
-              "status": "passed",
-              "duration": 5147768899
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -123,12 +108,9 @@
             "keyword": "Then ",
             "line": 12,
             "name": "the user should be redirected to the main page",
-            "match": {
-              "location": "features\\login\\login.steps.js:21"
-            },
             "result": {
-              "status": "passed",
-              "duration": 9168999
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -136,7 +118,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 246559400
+              "duration": 206736499
             }
           }
         ],
@@ -164,7 +146,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1241458000
+              "duration": 1413187899
             }
           },
           {
@@ -172,12 +154,9 @@
             "keyword": "Given ",
             "line": 7,
             "name": "the user is on the login page",
-            "match": {
-              "location": "features\\login\\login.steps.js:7"
-            },
             "result": {
-              "status": "passed",
-              "duration": 912225899
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -185,12 +164,9 @@
             "keyword": "When ",
             "line": 21,
             "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:14"
-            },
             "result": {
-              "status": "passed",
-              "duration": 101962800
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -198,12 +174,9 @@
             "keyword": "Then ",
             "line": 22,
             "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:32"
-            },
             "result": {
-              "status": "passed",
-              "duration": 8599700
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -211,7 +184,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 151655200
+              "duration": 121773199
             }
           }
         ],
@@ -239,7 +212,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1319766499
+              "duration": 1344169500
             }
           },
           {
@@ -247,12 +220,9 @@
             "keyword": "Given ",
             "line": 7,
             "name": "the user is on the login page",
-            "match": {
-              "location": "features\\login\\login.steps.js:7"
-            },
             "result": {
-              "status": "passed",
-              "duration": 821744199
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -260,12 +230,9 @@
             "keyword": "When ",
             "line": 21,
             "name": "the user enters username \"standard_user\" and password \"wrong_pass\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:14"
-            },
             "result": {
-              "status": "passed",
-              "duration": 112448199
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -273,12 +240,9 @@
             "keyword": "Then ",
             "line": 22,
             "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
-            "match": {
-              "location": "features\\login\\login.steps.js:32"
-            },
             "result": {
-              "status": "passed",
-              "duration": 12016899
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -286,7 +250,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 167753899
+              "duration": 116501800
             }
           }
         ],
@@ -311,60 +275,51 @@
     "uri": "features\\login\\login.feature"
   },
   {
-    "description": "  In order to validate the test page independently\n  As a QA\n  I want to use distinct steps that do not collide with the login module",
+    "description": "  In order to access protected areas\n  As a registered user\n  I want to log in using valid credentials",
     "elements": [
       {
         "description": "",
-        "id": "test-page-flows;successful-access-to-the-test-page",
+        "id": "user-login;successful-login-with-valid-credentials",
         "keyword": "Scenario Outline",
-        "line": 16,
-        "name": "Successful access to the test page",
+        "line": 14,
+        "name": "Successful login with valid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1288251400
+              "duration": 1301083499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "the user is on the test page",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
-            },
+            "name": "the user is on the login page",
             "result": {
-              "status": "passed",
-              "duration": 783835199
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 11,
-            "name": "the user fills test page username \"standard_user\" and test page password \"secret_sauce\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
-            },
+            "line": 9,
+            "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
             "result": {
-              "status": "passed",
-              "duration": 126114798
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "the test page main view is visible",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:12"
-            },
+            "line": 10,
+            "name": "the user should be redirected to the main page",
             "result": {
-              "status": "passed",
-              "duration": 8858999
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -372,70 +327,65 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 228509300
+              "duration": 120793400
             }
           }
         ],
         "tags": [
           {
-            "name": "@testpage",
-            "line": 1
+            "name": "@positive",
+            "line": 6
+          },
+          {
+            "name": "@smoke",
+            "line": 6
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "test-page-flows;successful-access-to-the-test-page",
+        "id": "user-login;successful-login-with-valid-credentials",
         "keyword": "Scenario Outline",
-        "line": 17,
-        "name": "Successful access to the test page",
+        "line": 15,
+        "name": "Successful login with valid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1356384799
+              "duration": 1296027100
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "the user is on the test page",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
-            },
+            "name": "the user is on the login page",
             "result": {
-              "status": "passed",
-              "duration": 804196900
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 11,
-            "name": "the user fills test page username \"performance_glitch_user\" and test page password \"secret_sauce\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
-            },
+            "line": 9,
+            "name": "the user enters username \"performance_glitch_user\" and password \"secret_sauce\"",
             "result": {
-              "status": "passed",
-              "duration": 5110248899
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "the test page main view is visible",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:12"
-            },
+            "line": 10,
+            "name": "the user should be redirected to the main page",
             "result": {
-              "status": "passed",
-              "duration": 4668499
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -443,70 +393,65 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 194869399
+              "duration": 125222999
             }
           }
         ],
         "tags": [
           {
-            "name": "@testpage",
-            "line": 1
+            "name": "@positive",
+            "line": 6
+          },
+          {
+            "name": "@smoke",
+            "line": 6
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "test-page-flows;unsuccessful-access-on-the-test-page",
+        "id": "user-login;unsuccessful-login-with-invalid-credentials",
         "keyword": "Scenario Outline",
         "line": 25,
-        "name": "Unsuccessful access on the test page",
+        "name": "Unsuccessful login with invalid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1077108899
+              "duration": 1264516600
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
-            "name": "the user is on the test page",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
-            },
+            "line": 19,
+            "name": "the user is on the login page",
             "result": {
-              "status": "passed",
-              "duration": 1055057698
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 20,
-            "name": "the user fills test page username \"wrong_user\" and test page password \"secret_sauce\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
-            },
+            "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
             "result": {
-              "status": "passed",
-              "duration": 95591798
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 21,
-            "name": "the test page should show an error \"Epic sadface: Username and password do not match any user in this service\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:16"
-            },
+            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
             "result": {
-              "status": "passed",
-              "duration": 18659598
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -514,70 +459,65 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 167037400
+              "duration": 105832099
             }
           }
         ],
         "tags": [
           {
-            "name": "@testpage",
-            "line": 1
+            "name": "@negative",
+            "line": 17
+          },
+          {
+            "name": "@smoke",
+            "line": 17
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "test-page-flows;unsuccessful-access-on-the-test-page",
+        "id": "user-login;unsuccessful-login-with-invalid-credentials",
         "keyword": "Scenario Outline",
         "line": 26,
-        "name": "Unsuccessful access on the test page",
+        "name": "Unsuccessful login with invalid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1158661000
+              "duration": 1219441900
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
-            "name": "the user is on the test page",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
-            },
+            "line": 19,
+            "name": "the user is on the login page",
             "result": {
-              "status": "passed",
-              "duration": 763491000
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 20,
-            "name": "the user fills test page username \"standard_user\" and test page password \"wrong_pass\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
-            },
+            "name": "the user enters username \"standard_user\" and password \"wrong_pass\"",
             "result": {
-              "status": "passed",
-              "duration": 91848098
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 21,
-            "name": "the test page should show an error \"Epic sadface: Username and password do not match any user in this service\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:16"
-            },
+            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
             "result": {
-              "status": "passed",
-              "duration": 15599500
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -585,29 +525,28 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 147467299
+              "duration": 102768599
             }
           }
         ],
         "tags": [
           {
-            "name": "@testpage",
-            "line": 1
+            "name": "@negative",
+            "line": 17
+          },
+          {
+            "name": "@smoke",
+            "line": 17
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "test-page-flows",
-    "line": 2,
+    "id": "user-login",
+    "line": 1,
     "keyword": "Feature",
-    "name": "Test page flows",
-    "tags": [
-      {
-        "name": "@testpage",
-        "line": 1
-      }
-    ],
+    "name": "User login",
+    "tags": [],
     "uri": "features\\testpage\\testpage.feature"
   }
 ]

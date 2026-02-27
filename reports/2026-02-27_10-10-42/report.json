@@ -1,0 +1,313 @@
+[
+  {
+    "description": "  In order to access protected areas of the application\n  As a registered user\n  I want to authenticate using my credentials",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;successful-login-using-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Successful login using valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3628832499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\login\\login.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1378356899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "the user enters username \"standard_user\" and password \"secret_sauce\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138919498
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the user should be redirected to the main page",
+            "match": {
+              "location": "features\\login\\login.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9321200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 239289099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 9
+          },
+          {
+            "name": "@smoke",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;successful-login-using-valid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Successful login using valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1358640499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\login\\login.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 893935198
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "the user enters username \"performance_glitch_user\" and password \"secret_sauce\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5197308499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the user should be redirected to the main page",
+            "match": {
+              "location": "features\\login\\login.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7864899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 294100399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive",
+            "line": 9
+          },
+          {
+            "name": "@smoke",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;unsuccessful-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 26,
+        "name": "Unsuccessful login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1292133700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\login\\login.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938652698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125931000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7960799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186406800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 19
+          },
+          {
+            "name": "@smoke",
+            "line": 19
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;unsuccessful-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 27,
+        "name": "Unsuccessful login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1414904699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\login\\login.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 789648898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the user enters username \"standard_user\" and password \"wrong_pass\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129885399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "features\\login\\login.steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7462299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186835299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative",
+            "line": 19
+          },
+          {
+            "name": "@smoke",
+            "line": 19
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User login",
+    "tags": [],
+    "uri": "features\\login\\login.feature"
+  }
+]

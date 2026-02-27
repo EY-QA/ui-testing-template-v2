@@ -1,6 +1,6 @@
 // Extend this factory as you add more Page Objects in /pages.
 const TestPage = require('../pages/testpage.page');
-const LoginPage = require('../features/login/login.page');
+const LoginPage = require('../pages/login.page');
 
 
 
@@ -16,4 +16,3 @@ class PageFactory {
 }
 
 module.exports = PageFactory;
-``

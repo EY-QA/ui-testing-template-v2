@@ -2,5 +2,6 @@
 reports/
 screenshots/
 artifacts/
+test-results/
 # Ignore node modules
 node_modules/

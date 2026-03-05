@@ -1,60 +1,124 @@
 [
   {
-    "description": "  In order to access protected areas\n  As a registered user\n  I want to log in using valid credentials",
+    "description": "  User should be able to add products to their shopping cart, manage items,\n  and proceed through a multi-step checkout process to complete a purchase.",
     "elements": [
       {
         "description": "",
-        "id": "user-login;successful-login-with-valid-credentials",
-        "keyword": "Scenario Outline",
-        "line": 14,
-        "name": "Successful login with valid credentials",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;add-single-product-to-cart",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Add single product to cart",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1642775700
+              "duration": 713893599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446599
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "the user is on the login page",
+            "name": "user is logged in and on the inventory page",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1590404800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 180020200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "the user should be redirected to the main page",
-            "match": {
-              "location": "features\\testpage\\testpage.steps.js:15"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
             },
             "result": {
               "status": "failed",
-              "duration": 5017021800,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/inventory/\u001b[39m\nReceived string:  \u001b[31m\"https://www.saucedemo.com/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.have.url\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://www.saucedemo.com/\"\u001b[22m\n\n    at Proxy.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at TestPage.assertLoginSuccess (C:\\QA\\ui-testing-template-main-v2.0\\pages\\testpage.page.js:27:29)\n    at World.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\testpage\\testpage.steps.js:18:25)"
+              "duration": 342198300,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user clicks the \"Add to cart\" button for \"Sauce Labs Backpack\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the button text should change to \"Remove\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user clicks the shopping cart icon",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:55"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "user should be navigated to cart page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:139"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "cart should display item \"Sauce Labs Backpack\" with quantity \"1\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:143"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "item price should be \"$29.99\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:148"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -62,74 +126,136 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 233193600
+              "duration": 139807900
             }
           }
         ],
         "tags": [
           {
-            "name": "@positive",
-            "line": 6
+            "name": "@add-to-cart",
+            "line": 2
           },
           {
             "name": "@smoke",
-            "line": 6
+            "line": 10
+          },
+          {
+            "name": "@happy-path",
+            "line": 10
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "user-login;successful-login-with-valid-credentials",
-        "keyword": "Scenario Outline",
-        "line": 15,
-        "name": "Successful login with valid credentials",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;add-multiple-different-products-to-cart",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Add multiple different products to cart",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 598472900
+              "duration": 373549699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 135299
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "the user is on the login page",
+            "name": "user is logged in and on the inventory page",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 972738100
+              "status": "failed",
+              "duration": 108177900,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 9,
-            "name": "the user enters username \"performance_glitch_user\" and password \"secret_sauce\"",
+            "line": 22,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
             },
             "result": {
-              "status": "passed",
-              "duration": 5134815699
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bolt T-Shirt\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "the user should be redirected to the main page",
+            "line": 25,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "user navigates to shopping cart",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:15"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
             },
             "result": {
-              "status": "passed",
-              "duration": 7354399
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "cart should contain \"3\" items with correct prices",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:155"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -137,74 +263,123 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 345748100
+              "duration": 152772100
             }
           }
         ],
         "tags": [
           {
-            "name": "@positive",
-            "line": 6
+            "name": "@add-to-cart",
+            "line": 2
           },
           {
             "name": "@smoke",
-            "line": 6
+            "line": 20
+          },
+          {
+            "name": "@happy-path",
+            "line": 20
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "user-login;unsuccessful-login-with-invalid-credentials",
-        "keyword": "Scenario Outline",
-        "line": 25,
-        "name": "Unsuccessful login with invalid credentials",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;add-same-product-multiple-times",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Add same product multiple times",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 671160300
+              "duration": 352796300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114899
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
-            "name": "the user is on the login page",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1169534800
+              "status": "failed",
+              "duration": 106727598,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
-            "name": "the user enters username \"wrong_user\" and password \"secret_sauce\"",
+            "line": 31,
+            "name": "user clicks \"Add to cart\" for \"Test.allTheThings() T-Shirt (Red)\" 3 times",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:38"
             },
             "result": {
-              "status": "passed",
-              "duration": 82951799
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
-            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
+            "line": 32,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "user navigates to shopping cart",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:22"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
             },
             "result": {
-              "status": "passed",
-              "duration": 12036300
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "cart should display item \"Test.allTheThings() T-Shirt (Red)\" with quantity \"3\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:143"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "total price should be \"$47.97\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:160"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -212,74 +387,136 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 149223799
+              "duration": 144137500
             }
           }
         ],
         "tags": [
           {
-            "name": "@negative",
-            "line": 17
+            "name": "@add-to-cart",
+            "line": 2
           },
           {
-            "name": "@smoke",
-            "line": 17
+            "name": "@happy-path",
+            "line": 29
           }
         ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "user-login;unsuccessful-login-with-invalid-credentials",
-        "keyword": "Scenario Outline",
-        "line": 26,
-        "name": "Unsuccessful login with invalid credentials",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;remove-product-from-cart-after-adding",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Remove product from cart after adding",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 637322299
+              "duration": 373532099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 124499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
-            "name": "the user is on the login page",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:3"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1002557300
+              "status": "failed",
+              "duration": 119883300,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
-            "name": "the user enters username \"standard_user\" and password \"wrong_pass\"",
+            "line": 39,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:8"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
             },
             "result": {
-              "status": "passed",
-              "duration": 83333299
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "user clicks the \"Remove\" button for \"Sauce Labs Backpack\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
-            "name": "the user should see an error message \"Epic sadface: Username and password do not match any user in this service\"",
+            "line": 42,
+            "name": "the button text should change to \"Add to cart\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "cart badge should show \"0\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "user navigates to shopping cart",
             "match": {
-              "location": "features\\testpage\\testpage.steps.js:22"
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
             },
             "result": {
-              "status": "passed",
-              "duration": 10820599
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "cart should be empty",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:165"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -287,28 +524,2481 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 161673099
+              "duration": 194308600
             }
           }
         ],
         "tags": [
           {
-            "name": "@negative",
-            "line": 17
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@happy-path",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;complete-full-checkout-process-after-adding-to-cart",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Complete full checkout process after adding to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 378583799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 90799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 120509998,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Fleece Jacket\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "user should be on \"checkout-step-one\" page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:170"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "user enters checkout information with first name \"John\", last name \"Doe\", zip \"12345\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "user should be on \"checkout-step-two\" page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:170"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "order summary should contain \"Sauce Labs Fleece Jacket\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:180"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "user clicks \"Finish\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "user should be on \"checkout-complete\" page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:170"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "confirmation message should display \"Thank you for your order!\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:185"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 187038199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
           },
           {
             "name": "@smoke",
-            "line": 17
+            "line": 47
+          },
+          {
+            "name": "@happy-path",
+            "line": 47
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;continue-shopping-after-viewing-cart",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Continue shopping after viewing cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 365634099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 109213099,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 64,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "user clicks \"Continue Shopping\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:85"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 68,
+            "name": "user should be back on inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:190"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "cart badge should show \"2\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 70,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Onesie\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 71,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195475600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@happy-path",
+            "line": 62
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;sort-products-and-add-to-cart",
+        "keyword": "Scenario",
+        "line": 74,
+        "name": "Sort products and add to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 383204499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 107717499,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 75,
+            "name": "user sorts products by \"Price (low to high)\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:89"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 76,
+            "name": "first product should be \"Sauce Labs Onesie\" with price \"$7.99\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:208"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 77,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Onesie\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 78,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "user sorts products by \"Price (high to low)\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:89"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 80,
+            "name": "first product should be \"Sauce Labs Fleece Jacket\" with price \"$49.99\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:208"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "product \"Sauce Labs Onesie\" button should show \"Remove\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:194"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 168997799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@happy-path",
+            "line": 73
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;verify-add-to-cart-button-state-changes-correctly",
+        "keyword": "Scenario",
+        "line": 84,
+        "name": "Verify add to cart button state changes correctly",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 349175900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 80500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 116918500,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 85,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 86,
+            "name": "button text should be \"Remove\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:203"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 87,
+            "name": "user clicks \"Remove\" button for \"Sauce Labs Backpack\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 88,
+            "name": "button text should be \"Add to cart\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:203"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 89,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\" again",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "button text should be \"Remove\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:203"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 172069700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@regression",
+            "line": 83
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;verify-cart-badge-calculation",
+        "keyword": "Scenario",
+        "line": 93,
+        "name": "Verify cart badge calculation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 398735800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 107662998,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 94,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 95,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 96,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 97,
+            "name": "cart badge should show \"2\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 98,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bolt T-Shirt\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 99,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 100,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\" again",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 101,
+            "name": "cart badge should show \"4\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 180294499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@regression",
+            "line": 92
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;verify-price-calculations-in-checkout-overview",
+        "keyword": "Scenario",
+        "line": 104,
+        "name": "Verify price calculations in checkout overview",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 431896800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 121178499,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 105,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 106,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Onesie\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 110,
+            "name": "user enters checkout information with first name \"John\", last name \"Doe\", zip \"12345\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 112,
+            "name": "item total should be \"$47.97\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:215"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 113,
+            "name": "tax should be calculated correctly",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:220"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 114,
+            "name": "final total should include item total plus tax",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:227"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167820900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@regression",
+            "line": 103
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;cancel-checkout-without-completing-information",
+        "keyword": "Scenario",
+        "line": 117,
+        "name": "Cancel checkout without completing information",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 362173700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 193199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 136187898,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 118,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 120,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 121,
+            "name": "user enters first name \"John\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:93"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 122,
+            "name": "user clicks \"Cancel\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:112"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 123,
+            "name": "user should be back on cart page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:240"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "cart should contain \"1\" item",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:244"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "product \"Sauce Labs Backpack\" should still be in cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:249"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 199293200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@negative",
+            "line": 116
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;checkout-with-missing-first-name",
+        "keyword": "Scenario",
+        "line": 128,
+        "name": "Checkout with missing first name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 383863099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 118538098,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 129,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 130,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 131,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 132,
+            "name": "user enters last name \"Doe\" and zip \"12345\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:97"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 133,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 134,
+            "name": "error message should appear indicating \"First Name is required\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:254"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "user should remain on checkout page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:260"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205965299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@negative",
+            "line": 127
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;checkout-with-missing-last-name",
+        "keyword": "Scenario",
+        "line": 138,
+        "name": "Checkout with missing last name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 374055099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 98256299,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 139,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 142,
+            "name": "user enters first name \"John\" and zip \"12345\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:102"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 143,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 144,
+            "name": "error message should appear indicating \"Last Name is required\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:254"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 145,
+            "name": "user should remain on checkout page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:260"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227315200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@negative",
+            "line": 137
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;checkout-with-missing-zip-code",
+        "keyword": "Scenario",
+        "line": 148,
+        "name": "Checkout with missing zip code",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 334864499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 89237298,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 149,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 150,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 151,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 152,
+            "name": "user enters first name \"John\" and last name \"Doe\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:107"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 153,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 154,
+            "name": "error message should appear indicating \"Zip/Postal Code is required\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:254"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 155,
+            "name": "user should remain on checkout page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:260"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 187994199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@negative",
+            "line": 147
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;cancel-checkout-on-review-page",
+        "keyword": "Scenario",
+        "line": 158,
+        "name": "Cancel checkout on review page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357635700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 61900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 108770198,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 159,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 160,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 161,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 162,
+            "name": "user enters checkout information with first name \"John\", last name \"Doe\", zip \"12345\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 163,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 164,
+            "name": "user clicks \"Cancel\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:112"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 165,
+            "name": "user should be back on cart page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:240"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 166,
+            "name": "cart should contain \"1\" item",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:244"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 184728000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@negative",
+            "line": 157
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;add-to-cart-with-special-characters-in-checkout-form",
+        "keyword": "Scenario",
+        "line": 169,
+        "name": "Add to cart with special characters in checkout form",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 404728600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 209253599,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 170,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 171,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 172,
+            "name": "user clicks \"Checkout\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:69"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 173,
+            "name": "user enters checkout information with first name \"Jean-Marie\", last name \"O'Brien\", zip \"12345-6789\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 174,
+            "name": "user clicks \"Continue\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:77"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 175,
+            "name": "user should be on \"checkout-step-two\" page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:170"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 176,
+            "name": "checkout information should persist",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:264"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105801899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@edge-case",
+            "line": 168
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;remove-all-items-from-cart-and-attempt-checkout",
+        "keyword": "Scenario",
+        "line": 179,
+        "name": "Remove all items from cart and attempt checkout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 349797199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 95731499,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 180,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 181,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 182,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Onesie\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 183,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 184,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 185,
+            "name": "user removes all items from cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:124"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 186,
+            "name": "cart badge should show \"0\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 187,
+            "name": "cart should be empty",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:165"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 188,
+            "name": "checkout button should not be available",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:269"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 130349399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@edge-case",
+            "line": 178
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;verify-cart-persists-after-page-navigation",
+        "keyword": "Scenario",
+        "line": 191,
+        "name": "Verify cart persists after page navigation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 343278900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 79066399,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 192,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 193,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Bike Light\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 194,
+            "name": "cart badge should show \"2\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 195,
+            "name": "user clicks on product \"Sauce Labs Backpack\" to view details",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:116"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 196,
+            "name": "product detail page should be displayed",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:274"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 197,
+            "name": "cart badge should still show \"2\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:279"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 198,
+            "name": "user navigates back to inventory",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:120"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 199,
+            "name": "product buttons should show \"Remove\" for added items",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:284"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 200,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 201,
+            "name": "cart should contain \"2\" items",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:291"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127078600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@edge-case",
+            "line": 190
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-to-cart---e-commerce-shopping-cart-management;add-items,-go-to-cart,-continue-shopping,-add-more",
+        "keyword": "Scenario",
+        "line": 204,
+        "name": "Add items, go to cart, continue shopping, add more",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 362921800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 117299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user is logged in and on the inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:15"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 249068098,
+              "error_message": "ReferenceError: LoginPage is not defined\n    at CustomWorld.<anonymous> (C:\\QA\\ui-testing-template-main-v2.0\\features\\add-to-cart\\add-to-cart.steps.js:17:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 205,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Backpack\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 206,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 207,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 208,
+            "name": "user clicks \"Continue Shopping\" button",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:85"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 209,
+            "name": "user should be back on inventory page",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:190"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 210,
+            "name": "cart badge should show \"1\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 211,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Fleece Jacket\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 212,
+            "name": "user clicks \"Add to cart\" for \"Sauce Labs Onesie\"",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 213,
+            "name": "cart badge should show \"3\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 214,
+            "name": "user navigates to shopping cart",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:59"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 215,
+            "name": "cart should contain \"3\" items",
+            "match": {
+              "location": "features\\add-to-cart\\add-to-cart.steps.js:291"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 157158999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@add-to-cart",
+            "line": 2
+          },
+          {
+            "name": "@edge-case",
+            "line": 203
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "user-login",
-    "line": 1,
+    "id": "add-to-cart---e-commerce-shopping-cart-management",
+    "line": 3,
     "keyword": "Feature",
-    "name": "User login",
-    "tags": [],
-    "uri": "features\\testpage\\testpage.feature"
+    "name": "Add to Cart - E-commerce Shopping Cart Management",
+    "tags": [
+      {
+        "name": "@add-to-cart",
+        "line": 2
+      }
+    ],
+    "uri": "features\\add-to-cart\\add-to-cart.feature"
   }
 ]

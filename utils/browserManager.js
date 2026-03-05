@@ -1,4 +1,7 @@
 const { chromium, firefox, webkit, devices, selectors } = require('playwright');
+const fs = require('fs');
+const path = require('path');
+
 
 selectors.setTestIdAttribute('data-test');
 
@@ -30,7 +33,8 @@ class BrowserManager {
   }
 
   /** Create a new browser context with base settings and optional device emulation */
-  async newContext() {
+  
+  async newContext({ useAuth = false } = {}) {
     if (!this.browser) await this.launch();
 
     const baseURL = process.env.BASE_URL || 'http://localhost:3000';
